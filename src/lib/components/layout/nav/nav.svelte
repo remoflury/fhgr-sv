@@ -4,14 +4,19 @@
 	import { CodeXml } from 'lucide-svelte';
 	import LightSwitch from './lightSwitch.svelte';
 
+	type Props = {
+		clientHeight?: number;
+	};
+	let { clientHeight = $bindable(0) }: Props = $props();
+
 	const items: {
 		label: string;
 		href: string;
 	}[] = [
-		{
-			href: '/quicklinks',
-			label: 'Quicklinks'
-		},
+		// {
+		// 	href: '/quicklinks',
+		// 	label: 'Quicklinks'
+		// },
 		{
 			href: '/quests',
 			label: 'Aufgaben'
@@ -19,7 +24,7 @@
 	];
 </script>
 
-<nav class="container my-2">
+<nav class="container py-2" bind:clientHeight>
 	<Menubar.Root class="items-center justify-end py-1 pl-4">
 		<a href="/" class="col-span-1 mr-auto max-w-max" title="zur Startseite">
 			<CodeXml class="stroke-primary" />

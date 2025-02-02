@@ -36,14 +36,14 @@
 	<h1>Welcome to Svelte / SvelteKit</h1>
 
 	<h2 class="">Quicklinks:</h2>
-	<ul class="grid-spacing grid grid-cols-2">
+	<ul class="grid-spacing grid md:grid-cols-2">
 		{#each links as link}
 			<li>
 				<Card.Root
 					tag="a"
 					href={link.href}
 					title={link.label}
-					class=" hover:bg-accent inline-block h-full w-full transition"
+					class="hover:bg-accent inline-block h-full w-full transition"
 				>
 					<Card.Header>
 						<Card.Title>{link.label}</Card.Title>
