@@ -18,7 +18,7 @@
 		// 	label: 'Quicklinks'
 		// },
 		{
-			href: '/quests',
+			href: '/aufgaben',
 			label: 'Aufgaben'
 		}
 	];

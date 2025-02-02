@@ -32,6 +32,10 @@
 	];
 </script>
 
+<svelte:head>
+	<title>Home</title>
+</svelte:head>
+
 <section class="section-spacing grid-content grid-spacing container">
 	<h1>Welcome to Svelte / SvelteKit</h1>
 
