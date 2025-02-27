@@ -52,7 +52,11 @@ const config: Config = {
 				card: {
 					DEFAULT: "hsl(var(--card) / <alpha-value>)",
 					foreground: "hsl(var(--card-foreground) / <alpha-value>)"
-				}
+				},
+				yellow: {
+					DEFAULT: "hsl(var(--yellow) / <alpha-value>)",
+					foreground: "hsl(var(--background) / <alpha-value>)"
+				},
 			},
 			borderRadius: {
 				lg: "var(--radius)",

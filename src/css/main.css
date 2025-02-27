@@ -25,6 +25,7 @@
     --ring: 142.1 76.2% 36.3%;
     --radius: 0.5rem;
 
+		--yellow: 47.9 95.8% 53.1%;
   }
   .dark {
     --background: 20 14.3% 4.1%;
@@ -46,6 +47,8 @@
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
     --ring: 142.4 71.8% 29.2%;
+
+		--yellow: 47.9 95.8% 53.1%;
   }
 }
  
@@ -55,7 +58,7 @@
 	}
 
 	body {
-		--pattern-fg: color-mix(in hsl, hsl(var(--foreground)) 10%, transparent);
+		--pattern-fg: color-mix(in hsl, hsl(var(--foreground)) 13%, transparent);
 		@apply scroll-smooth bg-background font-dm-serif tracking-wide text-foreground;
 		@apply bg-[size:20px_20px] bg-fixed;
 		background-image: radial-gradient(var(--pattern-fg) 1px, transparent 0);
