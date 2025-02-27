@@ -1,33 +1,40 @@
 <script lang="ts">
 	import * as Card from '$lib/components/ui/card';
+	import { SquareArrowOutUpRight } from 'lucide-svelte';
 	const links: {
 		label: string;
 		href: string;
 		desc?: string;
+		target?: '_blank' | undefined;
 	}[] = [
 		{
 			label: 'Svelte Dokumentation',
 			href: 'https://svelte.dev/',
-			desc: 'Erfahre mehr, wie Svelte und SvelteKit funktioniert.'
+			desc: 'Erfahre mehr, wie Svelte und SvelteKit funktioniert.',
+			target: '_blank'
 		},
 		{
 			label: 'Interaktives Svelte Tutorial',
-			href: 'https://svelte.dev/tutorial/svelte/welcome-to-svelte'
+			href: 'https://svelte.dev/tutorial/svelte/welcome-to-svelte',
+			target: '_blank'
 		},
 		{
 			label: 'Svelte Playground',
 			href: 'https://svelte.dev/playground/',
-			desc: 'Keine Lust ein Repo aufzusetzen? Hier schnell etwas aufsetzen.'
+			desc: 'Keine Lust ein Repo aufzusetzen? Hier schnell etwas aufsetzen.',
+			target: '_blank'
 		},
 		{
 			label: 'Svelte Libraries / Ecosystem',
 			href: 'https://github.com/svecosystem',
-			desc: 'Übersicht beliebter Svelte Libraries'
+			desc: 'Übersicht beliebter Svelte Libraries',
+			target: '_blank'
 		},
 		{
 			label: 'Tailwind v3 Dokumentation',
 			href: 'https://v3.tailwindcss.com/',
-			desc: 'Dokumentation des beliebten utility-first CSS-Frameworks.'
+			desc: 'Dokumentation des beliebten utility-first CSS-Frameworks.',
+			target: '_blank'
 		}
 	];
 </script>
@@ -47,8 +54,12 @@
 					tag="a"
 					href={link.href}
 					title={link.label}
-					class="hover:bg-accent inline-block h-full w-full transition"
+					target={link.target}
+					class="group relative inline-block h-full w-full transition hover:bg-accent"
 				>
+					<figure class="absolute right-6 top-6">
+						<SquareArrowOutUpRight class="transition group-hover:stroke-primary" />
+					</figure>
 					<Card.Header>
 						<Card.Title>{link.label}</Card.Title>
 					</Card.Header>
