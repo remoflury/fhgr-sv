@@ -1,4 +1,5 @@
 import { page } from "$app/state";
+import { PUBLIC_CUSTOM_KEY } from "$env/static/public";
 import AccordionsTask from "./components/tasks/accordionsTask.svelte";
 import AnimatedPath from "./components/tasks/animatedPath.svelte";
 import BasicRouting from "./components/tasks/basicRouting.svelte";
@@ -7,6 +8,7 @@ import CounterButtons from "./components/tasks/counterButtons.svelte";
 import DynamicAccordions from "./components/tasks/dynamicAccordions.svelte";
 import DynamicRouting from "./components/tasks/dynamicRouting.svelte";
 import FormActions from "./components/tasks/formActions.svelte";
+import UserSearch from "./components/tasks/userSearch.svelte";
 import type { TaskProps } from "./types";
 
 const EXAMPLE_TITLE = "Beispiel"
@@ -112,6 +114,21 @@ export const createTasks = (): TaskProps[] => {
       more: {
         title: EXAMPLE_TITLE,
         component: BasicRouting
+      }
+    },
+    {
+      points: 8,
+      difficulty: "advanced",
+      title: "Client Side Fetching mit Filtern (Params)",
+      description: `
+        Stell dir vor, du hast eine Datenbank API, auf die nicht jede*r zugreifen soll. Dazu gibt es sogenannte API-Keys, welche verifizieren, dass du die API lesen darfst.
+        Damit der API Key nicht veröffentlich wird, muss der Request jeweils server-seitig ausgelesen werden. Kopiere diesen API Key: <em style="font-weight: bold">${PUBLIC_CUSTOM_KEY}</em> in ein .env-File im Root-Directory deines Projektes.
+        Erstelle einen client-seitigen Fetch an einen eigenen <a href="https://svelte.dev/docs/kit/routing#server" target="_blank">custom api Endpoint</a>. Fetche von dort aus mithilfe von eines Headers "x-api-key": <api-key> einen fetch an ${page.url.origin}/api/users
+        und stelle die Response im Frontend dar. Erstelle zusätzlich Filter mit URL Params für eine Suche (q). 
+      `,
+      more: {
+        title: EXAMPLE_TITLE,
+        component: UserSearch
       }
     },
   ] 

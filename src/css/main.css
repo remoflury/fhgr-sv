@@ -138,15 +138,18 @@
 	.cke a {
 		@apply underline underline-offset-2 transition hover:text-primary
 	}
-form {
-	@apply text-base font-normal my-8 first:mt-0 last:mb-0; 
+	form {
+		@apply text-base font-normal my-8 first:mt-0 last:mb-0; 
+
+		
+	}
 
 	label {
-		@apply block mb-1;
+		@apply block mb-1 text-sm;
 	}
 
 	input {
-		@apply block w-full bg-foreground text-background px-4 py-1 selection:text-foreground
+		@apply block w-full !bg-white text-black px-4 py-1 selection:text-foreground border-foreground border
 	}
 
 	/* remove default input[type="number"] arrows */
@@ -161,5 +164,4 @@ form {
 	input[type=number] {
 		-moz-appearance: textfield;
 	}
-}
 }

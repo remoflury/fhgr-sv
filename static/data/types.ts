@@ -44,6 +44,6 @@ export type DummyJsonProduct = {
   thumbnail: string;
 }
 
-export type DummyJsonProductProps = BaseDummyJsonApi & {
+export type DummyJsonProductApiResponse = BaseDummyJsonApi & {
   products: DummyJsonProduct[]
 }
