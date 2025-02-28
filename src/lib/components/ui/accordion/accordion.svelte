@@ -11,7 +11,7 @@
 	};
 	let { title, body, class: className = '' }: Props = $props();
 
-	let open = $state(false);
+	let open = $state(true);
 	const toggle = () => {
 		open = !open;
 	};

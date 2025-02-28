@@ -1,3 +1,4 @@
+import AnimatedPath from "./components/tasks/animatedPath.svelte";
 import ConditionalClasses from "./components/tasks/conditionalClasses.svelte";
 import CounterButtons from "./components/tasks/counterButtons.svelte";
 import type { TaskProps } from "./types";
@@ -17,18 +18,22 @@ export const tasks: TaskProps[] = [
   },
   {
     points: 1,
-    difficulty: "medium",
+    difficulty: "easy",
     title: "Conditional Classes",
-    description: "Erstelle einen Komponenten deiner Wahl und füge reaktiv Klassen hinzu, um das Styling zu verändern.<br/>Tip: Es gibt gaaaanz viele Möglichkeiten, wie das geschehen kann.",
+    description: "Erstelle einen Komponenten deiner Wahl und füge reaktiv Klassen hinzu, um das Styling zu verändern.<br/>💡 Es gibt gaaaanz viele Möglichkeiten, wie das geschehen kann.",
     more: {
       title: EXAMPLE_TITLE,
       component: ConditionalClasses
     }
   },
   {
-    points: 1,
-    difficulty: "advanced",
-    title: "Conditional Classes",
-    description: "Erstelle einen Komponenten deiner Wahl und füge reaktiv Klassen hinzu, um das Styling zu verändern."
+    points: 3,
+    difficulty: "medium",
+    title: "Transitions & Animierter SVG Pfad",
+    description: "Erstelle ein SVG, das onclick auf einen Button erscheint. Dessen Pfad soll animiert sein.<br/>💡 <a href='https://lucide.dev' target='_blank'>Hier</a> findest du ganz viele geeignete SVGs zum kopieren.",
+    more: {
+      title: EXAMPLE_TITLE,
+      component: AnimatedPath
+    }
   }
 ] 

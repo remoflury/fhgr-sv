@@ -28,9 +28,9 @@
 				Punkte: {task.points}
 			</h4>
 
-			<div>
+			<p class="cke">
 				{@html task.description}
-			</div>
+			</p>
 
 			{#if task.more}
 				<div class="ml-8 mt-8">

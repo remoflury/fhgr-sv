@@ -124,3 +124,9 @@
 		@apply gap-y-4 md:gap-y-6 xl:gap-y-7;
 	}
 }
+
+@layer components {
+	.cke a {
+		@apply underline underline-offset-2 transition hover:text-primary
+	}
+}
