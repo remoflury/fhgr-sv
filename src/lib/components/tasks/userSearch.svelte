@@ -9,7 +9,8 @@
 	let fetchWithKey = $state(true);
 
 	const fetchUsers = async (q: string, withKey: boolean) => {
-		new Promise((resolve) => setTimeout(resolve, 200));
+		// to simulate latency
+		await new Promise((resolve) => setTimeout(resolve, 500));
 		const url = new URL(`${page.url.origin}/api/tasks/user`);
 		if (q) {
 			url.searchParams.set('q', q);
@@ -76,7 +77,13 @@
 				<p>Kein User mit Suchbegriff: {query} gefunden.</p>
 			{/each}
 		{:catch err}
-			<p class="bg-destructive px-4 py-2 text-destructive-foreground">Ups, da lief etwas schief</p>
+			<p class="bg-destructive px-4 py-2 text-destructive-foreground">
+				{#if fetchWithKey}
+					Ups, da lief etwas schief.
+				{:else}
+					Unauthorisierter Zugriff
+				{/if}
+			</p>
 		{/await}
 	</div>
 </div>
