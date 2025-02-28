@@ -73,7 +73,7 @@
 	.h3,
 	h4,
 	.h4 {
-		@apply font-atkinson;
+		@apply font-atkinson tracking-wider
 	}
 
 	h1,
@@ -94,6 +94,15 @@
 	h4,
 	.h4 {
 		@apply mb-1 text-lg;
+	}
+
+	p,
+	a,
+	button,
+	ol,
+	ul,
+	li {
+		@apply leading-relaxed tracking-wide
 	}
 
 	/* Layout */
