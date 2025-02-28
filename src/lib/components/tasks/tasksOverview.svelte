@@ -1,7 +1,9 @@
 <script lang="ts">
-	import { tasks } from '$lib/data';
+	import { createTasks } from '$lib/data';
 	import Accordion from '../ui/accordion/accordion.svelte';
 	import Badge from '../ui/badge/badge.svelte';
+
+	const tasks = createTasks();
 </script>
 
 {#each tasks as task}
