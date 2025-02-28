@@ -1,6 +1,7 @@
 import { page } from "$app/state";
 import AccordionsTask from "./components/tasks/accordionsTask.svelte";
 import AnimatedPath from "./components/tasks/animatedPath.svelte";
+import BasicRouting from "./components/tasks/basicRouting.svelte";
 import ConditionalClasses from "./components/tasks/conditionalClasses.svelte";
 import CounterButtons from "./components/tasks/counterButtons.svelte";
 import DynamicAccordions from "./components/tasks/dynamicAccordions.svelte";
@@ -93,6 +94,24 @@ export const createTasks = (): TaskProps[] => {
       more: {
         title: EXAMPLE_TITLE,
         component: DynamicRouting
+      }
+    },
+    {
+      points: 4,
+      difficulty: "easy",
+      title: "Basic Routing and Fetching, mit Layouts und Errors",
+      description: `
+       Erstelle eine neue Route /basic-routing. Erstelle eine Subroute /basic-routing/test.
+       Setze deine Files so auf, dass du ein simples Menu in /basic-routing hast, welches automatisch in alles Subroutes (z.B. /basic-routing/test) vorkommt.
+       Erstelle zudem in /basic-routing ein +page.server.ts, welches einen Inhalt (h1 und p) lädt und ans +page.svelte gibt.
+       Stelle sicher, dass eine Error Seite aufgerufen wird, wenn /basic-routing/blabla aufgerufen wird.
+       <br/>
+       <br/>
+       💡 <a href="https://svelte.dev/docs/kit/routing" target="_blank">Hier</a> findest du mehr Infos zum Routing von SvelteKit<br/>
+      `,
+      more: {
+        title: EXAMPLE_TITLE,
+        component: BasicRouting
       }
     },
   ] 

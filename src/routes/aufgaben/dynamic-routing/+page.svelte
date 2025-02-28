@@ -4,6 +4,10 @@
 	let { data } = $props();
 </script>
 
+<svelte:head>
+	<title>Dynamic Routing</title>
+</svelte:head>
+
 <section class="section-spacing grid-content grid-spacing container">
 	<h1>Hier sind 10 Produkte aufgelistet</h1>
 

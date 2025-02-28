@@ -6,6 +6,10 @@
 	const { product } = $derived(data);
 </script>
 
+<svelte:head>
+	<title>{product.title}</title>
+</svelte:head>
+
 <section class="section-spacing grid-content grid-spacing container">
 	<figure class="aspect-video md:col-span-4">
 		<img
