@@ -4,6 +4,7 @@ import AnimatedPath from "./components/tasks/animatedPath.svelte";
 import ConditionalClasses from "./components/tasks/conditionalClasses.svelte";
 import CounterButtons from "./components/tasks/counterButtons.svelte";
 import DynamicAccordions from "./components/tasks/dynamicAccordions.svelte";
+import DynamicRouting from "./components/tasks/dynamicRouting.svelte";
 import FormActions from "./components/tasks/formActions.svelte";
 import type { TaskProps } from "./types";
 
@@ -62,7 +63,7 @@ export const createTasks = (): TaskProps[] => {
       }
     },
     {
-      points: 5,
+      points: 6,
       difficulty: "advanced",
       title: "Form Actions in SvelteKit",
       description: `
@@ -76,6 +77,22 @@ export const createTasks = (): TaskProps[] => {
       more: {
         title: EXAMPLE_TITLE,
         component: FormActions
+      }
+    },
+    {
+      points: 7,
+      difficulty: "advanced",
+      title: "Dynamic Routing & fetching",
+      description: `
+       Mit der <a href="https://dummyjson.com/docs/products" target="_blank">DummyJSON API</a> können Produkte gefetcht werden. Erstelle eine Übersichtsseite, auf der 10 Produkte angezeigt werden. Verlinke jede einzelnes Produkt auf eine dynamische Einzelseite (Dynamic Routing). Fetche den Inhalt jeweils serverseitig (+page.server.ts).
+       <br/>
+       <br/>
+       💡 <a href="https://svelte.dev/docs/kit/routing" target="_blank">Hier</a> findest du mehr Infos zum Routing von SvelteKit<br/>
+       💡 <a href="/data/types.ts" target="_blank" >Hier</a> kannst du die Types für die API Response herunterladen.
+      `,
+      more: {
+        title: EXAMPLE_TITLE,
+        component: DynamicRouting
       }
     },
   ] 
