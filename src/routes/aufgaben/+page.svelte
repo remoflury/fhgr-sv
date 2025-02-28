@@ -23,7 +23,7 @@
 	</article>
 </section>
 
-<section class="section-spacing grid-content grid-spacing container">
+<section class="section-spacing grid-content container">
 	<h2>Aufgaben</h2>
 
 	<TasksOverview />

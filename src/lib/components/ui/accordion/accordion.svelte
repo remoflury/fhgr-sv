@@ -19,14 +19,14 @@
 
 <article class="border-b border-secondary {className}">
 	<button class="w-full" onclick={toggle} aria-label="toggle">
-		<h3 class="flex w-full items-center justify-between gap-x-4 py-4 transition">
+		<h3 class="mb-0 flex w-full items-center justify-between gap-x-4 py-4 transition lg:py-6">
 			{@render title()}
-			<ChevronDown />
+			<ChevronDown class="transition {open && 'rotate-180'}" />
 		</h3>
 	</button>
 
 	{#if open}
-		<div class="pb-6 pt-4" transition:slide={{ duration: 200, easing: sineInOut }}>
+		<div class="pb-8 pt-4 lg:pb-16" transition:slide={{ duration: 200, easing: sineInOut }}>
 			{@render body()}
 		</div>
 	{/if}
