@@ -5,7 +5,7 @@
 </script>
 
 <p>
-	Hier ist ein Formular, welches keine Frontend-Validierung hat (max=10 und requred="true" fehlen).
+	Hier ist ein Formular, welches keine Frontend-Validierung hat (max=9 und requred="true" fehlen).
 	Die Nummer sollte kleiner als 10 sein. Die Valiedierung geschieht Server-Seitig.
 </p>
 <form
@@ -14,11 +14,10 @@
 	class="max-w-80"
 	use:enhance={() => {
 		return async ({ result }) => {
-			console.log({ result });
 			if (result.type == 'failure') {
 				toast.error(result.data?.message as string);
 			} else {
-				toast.success(result.data?.message as string);
+				toast.success('Nummer erfolgreich validiert.');
 			}
 		};
 	}}

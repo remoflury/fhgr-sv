@@ -11,11 +11,8 @@ export const actions: Actions = {
       return fail(403, { message: "Nummer muss ausgefüllt sein."})
     }
     if (Number(number) >= 10) {
-      return fail(403, { message: "Nummer muss grösser als 10."})
+      return fail(403, { message: "Nummer muss kleiner als 10 sein."})
     }
 
-    return {
-      message: "Erfolgreiche Validierung"
-    }
   }
 };
