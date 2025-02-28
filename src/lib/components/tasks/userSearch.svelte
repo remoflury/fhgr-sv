@@ -22,8 +22,6 @@
 		const res = await fetch(url);
 		const data: DummyJsonUsersApiResponse = await res.json();
 
-		console.log(data);
-
 		if (res.status >= 400) {
 			throw new Error();
 		}

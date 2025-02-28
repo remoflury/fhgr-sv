@@ -20,6 +20,11 @@
 			class="lg:max-w-3/4 mt-8 pl-4 lg:pl-8"
 			text="Erstelle in deinem eigenen Svelte Projekt immer eine neue route (+page.svelte) pro Aufgabe."
 		/>
+		<Tip
+			class="lg:max-w-3/4 mt-3 pl-4 lg:pl-8"
+			icon="🧠"
+			text="AI-Tools sind erlaubt, probiert aber so gut es geht darauf zu verzichten - so lernt ihr mehr (;"
+		/>
 	</article>
 </section>
 

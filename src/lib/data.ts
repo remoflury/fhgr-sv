@@ -8,6 +8,7 @@ import CounterButtons from "./components/tasks/counterButtons.svelte";
 import DynamicAccordions from "./components/tasks/dynamicAccordions.svelte";
 import DynamicRouting from "./components/tasks/dynamicRouting.svelte";
 import FormActions from "./components/tasks/formActions.svelte";
+import InputBinding from "./components/tasks/inputBinding.svelte";
 import UserSearch from "./components/tasks/userSearch.svelte";
 import type { TaskProps } from "./types";
 
@@ -132,6 +133,18 @@ export const createTasks = (): TaskProps[] => {
       more: {
         title: EXAMPLE_TITLE,
         component: UserSearch
+      }
+    },
+    {
+      points: 1,
+      difficulty: "easy",
+      title: "Input value binding",
+      description: `
+        Erstelle einen input field und zeige dessen Inhalt direkt als Titel an. Erstelle nebenbei eine Anzeige, die automatisch die aktuelle Anzahl der "e" rausgibt.
+      `,
+      more: {
+        title: EXAMPLE_TITLE,
+        component: InputBinding
       }
     },
   ] 
