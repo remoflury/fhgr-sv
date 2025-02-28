@@ -16,6 +16,10 @@
 			Dazu findest du hier eine Aufgabensammlung, welche dir unterschiedliche Konzepte des
 			Frameworks näher bringen soll. Sammle möglichst viele Punkte!
 		</p>
+		<p>
+			Die Beispiele der Aufgaben sind wortwörtlich Beispiele. Ihr dürft euch gerne an ihnen
+			orientieren, dürft aber gerne eigene Ideen umsetzen.
+		</p>
 		<Tip
 			class="lg:max-w-3/4 mt-8 pl-4 lg:pl-8"
 			text="Erstelle in deinem eigenen Svelte Projekt immer eine neue route (+page.svelte) pro Aufgabe."

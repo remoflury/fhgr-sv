@@ -9,6 +9,7 @@ import DynamicAccordions from "./components/tasks/dynamicAccordions.svelte";
 import DynamicRouting from "./components/tasks/dynamicRouting.svelte";
 import FormActions from "./components/tasks/formActions.svelte";
 import InputBinding from "./components/tasks/inputBinding.svelte";
+import StoreTask from "./components/tasks/storeTask.svelte";
 import UserSearch from "./components/tasks/userSearch.svelte";
 import type { TaskProps } from "./types";
 
@@ -145,6 +146,22 @@ export const createTasks = (): TaskProps[] => {
       more: {
         title: EXAMPLE_TITLE,
         component: InputBinding
+      }
+    },
+    {
+      points: 2,
+      difficulty: "easy",
+      title: "Stores",
+      description: `
+        Erstelle einen Writable Store, welcher über mehrere Seiten hinweg konsistenz bleibt. Stores sind Variabeln, die global erhältlich sind. Sie gehen bei einem Page Reload verloren.
+        Kreiere dafür Subroutes, um die Verwendung des Stores zu simulieren.
+        <br/>
+        <br/>
+        💡 <a href="https://svelte.dev/docs/svelte/svelte-store" target="_blank">Hier</a> findest du mehr zu Stores.<br/>
+      `,
+      more: {
+        title: EXAMPLE_TITLE,
+        component: StoreTask
       }
     },
   ] 
