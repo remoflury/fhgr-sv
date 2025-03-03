@@ -7,6 +7,7 @@ import ConditionalClasses from "./components/tasks/conditionalClasses.svelte";
 import CounterButtons from "./components/tasks/counterButtons.svelte";
 import DynamicAccordions from "./components/tasks/dynamicAccordions.svelte";
 import DynamicRouting from "./components/tasks/dynamicRouting.svelte";
+import EffectTask from "./components/tasks/effectTask.svelte";
 import FormActions from "./components/tasks/formActions.svelte";
 import InputBinding from "./components/tasks/inputBinding.svelte";
 import StoreTask from "./components/tasks/storeTask.svelte";
@@ -170,6 +171,18 @@ export const createTasks = (): TaskProps[] => {
       more: {
         title: EXAMPLE_TITLE,
         component: StoreTask
+      }
+    },
+    {
+      points: 2,
+      difficulty: "easy",
+      title: "$effects",
+      description: `
+        Erstelle einen Komponenten mit einem Button, welcher on click die Hintergrundfarbe des Body ändert. Nutze dazu $effect.
+      `,
+      more: {
+        title: EXAMPLE_TITLE,
+        component: EffectTask
       }
     },
   ] 
