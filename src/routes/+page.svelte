@@ -25,14 +25,14 @@
 			target: '_blank'
 		},
 		{
-			label: 'Svelte Libraries / Ecosystem',
-			href: 'https://github.com/svecosystem',
+			label: 'Svelte Libraries',
+			href: 'https://github.com/TheComputerM/awesome-svelte',
 			desc: 'Übersicht beliebter Svelte Libraries',
 			target: '_blank'
 		},
 		{
-			label: 'Tailwind v3 Dokumentation',
-			href: 'https://v3.tailwindcss.com/',
+			label: 'Tailwind v4 Dokumentation',
+			href: 'https://tailwindcss.com/',
 			desc: 'Dokumentation des beliebten utility-first CSS-Frameworks.',
 			target: '_blank'
 		}
