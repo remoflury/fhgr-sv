@@ -1,10 +1,12 @@
 import type { Component } from "svelte";
 
+export type DifficultyProps = "easy" | "medium" | "advanced"
+
 export type TaskProps = {
   title: string;
   description: string;
   points: number;
-  difficulty: "easy" | "medium" | "advanced",
+  difficulty: DifficultyProps,
   more?: {
     title: string,
     component: Component
