@@ -51,7 +51,11 @@ export const createTasks = (): TaskProps[] => {
       points: 2,
       difficulty: "easy",
       title: "Accordions",
-      description: "Erstelle mehrere Accordions / Collapsibles, wie diejenigen, welche diese Aufgaben darin sind. Benutze dafür Svelte's snippet() Funktion, um Inhalte dynamisch in den Komponent zu passen.",
+      description: `
+        Erstelle mehrere Accordions / Collapsibes, wie diejenigen, welche diese Aufgaben darin sind. Benutze dafür Svelte's snippet() Funktion, um Inhalte dynamisch in den Komponent zu passen.
+        
+        `,
+        
       more: {
         title: EXAMPLE_TITLE,
         component: AccordionsTask
@@ -61,7 +65,11 @@ export const createTasks = (): TaskProps[] => {
       points: 4,
       difficulty: "medium",
       title: "Dynamic fetched Accordions",
-      description: `Erstelle mehrere Accordions / Collapsibles, wie diejenigen, welche diese Aufgaben darin sind. Benutze dafür Svelte's snippet() Funktion, um Inhalte dynamisch in den Komponent zu passen. Hole dir den Inhalt dafür mittels fetch() von ${page.url.origin}/api/accordions. Verwende await Blöcke und zeige zuerst Skeleton Loaders an.`,
+      description: `Erstelle mehrere Accordions / Collapsibles, wie diejenigen, welche diese Aufgaben darin sind. Benutze dafür Svelte's snippet() Funktion, um Inhalte dynamisch in den Komponent zu passen. Hole dir den Inhalt dafür mittels fetch() von ${page.url.origin}/api/accordions. Verwende await Blöcke und zeige zuerst Skeleton Loaders an.
+        <br/>
+        <br/>
+         💡 Wenn du die vorherige Aufgabe gemacht hast, kannst du den Komponenten einfach wiederverwenden.
+      `,
       more: {
         title: EXAMPLE_TITLE,
         component: DynamicAccordions
@@ -153,7 +161,7 @@ export const createTasks = (): TaskProps[] => {
       difficulty: "easy",
       title: "Stores",
       description: `
-        Erstelle einen Writable Store, welcher über mehrere Seiten hinweg konsistenz bleibt. Stores sind Variabeln, die global erhältlich sind. Sie gehen bei einem Page Reload verloren.
+        Erstelle einen Writable Store, welcher über mehrere Seiten hinweg den Wert beibehält. Stores sind Variabeln, die global erhältlich sind. Sie gehen bei einem Page Reload verloren.
         Kreiere dafür Subroutes, um die Verwendung des Stores zu simulieren.
         <br/>
         <br/>
