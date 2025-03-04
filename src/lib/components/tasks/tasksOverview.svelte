@@ -53,7 +53,7 @@
 		class="grid-spacing grid grid-cols-subgrid"
 		in:fly={{ duration: 150, easing: sineInOut, y: -8 }}
 	>
-		<Accordion class="lg:col-span-8">
+		<Accordion class="col-span-full lg:col-span-8">
 			{#snippet title()}
 				<div class="flex w-full items-center justify-between gap-x-4">
 					<span class="text-left">

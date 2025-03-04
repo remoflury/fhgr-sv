@@ -166,6 +166,6 @@
 	}
 
 	input[type=checkbox] {
-		@apply focus:outline-none
+		@apply focus:outline-none accent-primary
 	}
 }

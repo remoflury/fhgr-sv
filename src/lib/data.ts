@@ -3,6 +3,7 @@ import { PUBLIC_CUSTOM_KEY } from "$env/static/public";
 import AccordionsTask from "./components/tasks/accordionsTask.svelte";
 import AnimatedPath from "./components/tasks/animatedPath.svelte";
 import BasicRouting from "./components/tasks/basicRouting.svelte";
+import BindingTask from "./components/tasks/bindingTask.svelte";
 import ConditionalClasses from "./components/tasks/conditionalClasses.svelte";
 import CounterButtons from "./components/tasks/counterButtons.svelte";
 import DynamicAccordions from "./components/tasks/dynamicAccordions.svelte";
@@ -37,6 +38,16 @@ export const createTasks = (): TaskProps[] => {
       more: {
         title: EXAMPLE_TITLE,
         component: ConditionalClasses
+      }
+    },
+    {
+      points: 2,
+      difficulty: "easy",
+      title: "Bindings",
+      description: "Erstelle ein Input Field, welche ein Element animiert (Farbe, Width, etc.). Nutze dafür bindings.",
+      more: {
+        title: EXAMPLE_TITLE,
+        component: BindingTask
       }
     },
     {
@@ -194,6 +205,22 @@ export const createTasks = (): TaskProps[] => {
       description: `
         Erstelle eine neue Route /page-transition mit einem +layout.svelte & +page.svelte. Erstelle danach Subroutes /page-transition/[slug]. 
         Erfasse im Layout ein Menu, damit du zwischen den Seiten hin und her wechseln kannst. Implementiere eine Page Transition zwischen den Seiten.
+      `,
+      more: {
+        title: EXAMPLE_TITLE,
+        component: PageTransitionTask
+      }
+    },
+    {
+      points: 3,
+      difficulty: "easy",
+      title: "Mouse Positions",
+      description: `
+       Zeige die Maus-Positionen in Realtime an und erstelle Interaktionen basierend auf deren Werte.
+ <br/>
+        <br/>
+       💡 <a href="https://svelte.dev/docs/svelte/svelte-window" target="_blank" ><svelte:window></a> könnte dir helfen.
+       
       `,
       more: {
         title: EXAMPLE_TITLE,
