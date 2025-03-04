@@ -10,6 +10,7 @@ import DynamicRouting from "./components/tasks/dynamicRouting.svelte";
 import EffectTask from "./components/tasks/effectTask.svelte";
 import FormActions from "./components/tasks/formActions.svelte";
 import InputBinding from "./components/tasks/inputBinding.svelte";
+import PageTransitionTask from "./components/tasks/pageTransitionTask.svelte";
 import StoreTask from "./components/tasks/storeTask.svelte";
 import UserSearch from "./components/tasks/userSearch.svelte";
 import type { TaskProps } from "./types";
@@ -184,6 +185,19 @@ export const createTasks = (): TaskProps[] => {
       more: {
         title: EXAMPLE_TITLE,
         component: EffectTask
+      }
+    },
+    {
+      points: 4,
+      difficulty: "medium",
+      title: "Page Transitions",
+      description: `
+        Erstelle eine neue Route /page-transition mit einem +layout.svelte & +page.svelte. Erstelle danach Subroutes /page-transition/[slug]. 
+        Erfasse im Layout ein Menu, damit du zwischen den Seiten hin und her wechseln kannst. Implementiere eine Page Transition zwischen den Seiten.
+      `,
+      more: {
+        title: EXAMPLE_TITLE,
+        component: PageTransitionTask
       }
     },
   ] 
