@@ -11,6 +11,7 @@ import DynamicRouting from "./components/tasks/dynamicRouting.svelte";
 import EffectTask from "./components/tasks/effectTask.svelte";
 import FormActions from "./components/tasks/formActions.svelte";
 import InputBinding from "./components/tasks/inputBinding.svelte";
+import MousePositionTask from "./components/tasks/mousePositionTask.svelte";
 import PageTransitionTask from "./components/tasks/pageTransitionTask.svelte";
 import StoreTask from "./components/tasks/storeTask.svelte";
 import UserSearch from "./components/tasks/userSearch.svelte";
@@ -214,17 +215,17 @@ export const createTasks = (): TaskProps[] => {
     {
       points: 3,
       difficulty: "easy",
-      title: "Mouse Positions",
+      title: "Maus-Position",
       description: `
-       Zeige die Maus-Positionen in Realtime an und erstelle Interaktionen basierend auf deren Werte.
- <br/>
+       Zeige Maus-Position in Realtime an und erstelle Interaktionen basierend auf deren Werte.
         <br/>
-       💡 <a href="https://svelte.dev/docs/svelte/svelte-window" target="_blank" ><svelte:window></a> könnte dir helfen.
+        <br/>
+       💡 <a href="https://svelte.dev/docs/svelte/svelte-window" target="_blank" >svelte:body</a> könnte dir helfen.
        
       `,
       more: {
         title: EXAMPLE_TITLE,
-        component: PageTransitionTask
+        component: MousePositionTask
       }
     }
   ] 
