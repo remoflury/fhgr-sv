@@ -199,7 +199,7 @@ export const createTasks = (): TaskProps[] => {
         title: EXAMPLE_TITLE,
         component: PageTransitionTask
       }
-    },
+    }
   ] 
   
 } 

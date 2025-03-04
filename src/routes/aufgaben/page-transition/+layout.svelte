@@ -1,13 +1,13 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import { sineInOut } from 'svelte/easing';
-	import { fly, slide } from 'svelte/transition';
+	import { fly } from 'svelte/transition';
 
 	let { children } = $props();
 
 	const sites = [
 		{
-			label: 'Page-Transition',
+			label: 'Page Transition',
 			href: `/aufgaben/page-transition`
 		},
 		{
@@ -24,6 +24,10 @@
 		}
 	];
 </script>
+
+<svelte:head>
+	<title>Page Transitions</title>
+</svelte:head>
 
 <ul class="section-spacing flex flex-wrap gap-x-4 gap-y-2 lg:gap-x-8">
 	{#each sites as site}
