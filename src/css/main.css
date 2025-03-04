@@ -149,7 +149,7 @@
 	}
 
 	input {
-		@apply block w-full !bg-white text-black px-4 py-1 selection:text-foreground border-foreground border
+		@apply block w-full !bg-white text-black px-4 py-1 selection:text-foreground border-foreground border rounded-md focus:outline-none focus:outline-primary
 	}
 
 	/* remove default input[type="number"] arrows */
@@ -163,5 +163,9 @@
 	/* Firefox */
 	input[type=number] {
 		-moz-appearance: textfield;
+	}
+
+	input[type=checkbox] {
+		@apply focus:outline-none
 	}
 }

@@ -75,11 +75,11 @@
 				<p>Kein User mit Suchbegriff: {query} gefunden.</p>
 			{/each}
 		{:catch err}
-			<p class="bg-destructive px-4 py-2 text-destructive-foreground">
+			<p class="rounded-md bg-destructive px-4 py-2 text-destructive-foreground">
 				{#if fetchWithKey}
 					Ups, da lief etwas schief.
 				{:else}
-					Unauthorisierter Zugriff
+					Unauthentifizierter Zugriff, access denied.
 				{/if}
 			</p>
 		{/await}
