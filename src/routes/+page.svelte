@@ -31,6 +31,12 @@
 			target: '_blank'
 		},
 		{
+			label: 'Dataflow in SvelteKit',
+			href: 'https://joyofcode.xyz/sveltekit-data-flow',
+			desc: 'Wie funktioniert der Dataflow in SvelteKit?',
+			target: '_blank'
+		},
+		{
 			label: 'Tailwind v4 Dokumentation',
 			href: 'https://tailwindcss.com/',
 			desc: 'Dokumentation des beliebten utility-first CSS-Frameworks.',
