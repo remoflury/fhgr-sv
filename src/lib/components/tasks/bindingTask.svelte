@@ -1,8 +1,18 @@
 <script lang="ts">
-	import { sineInOut } from 'svelte/easing';
+	import { sineInOut, linear } from 'svelte/easing';
 	import { Tween } from 'svelte/motion';
+	import * as Card from '$lib/components/ui/card';
 
-	const tween = new Tween(20, { duration: 125, easing: sineInOut });
+	let duration = $state(1000);
+	let delay = $state(0);
+	const easingMap = {
+		sineInOut: sineInOut,
+		linear: linear
+	};
+
+	let selectedEasing: keyof typeof easingMap = $state('sineInOut');
+
+	const tween = $derived(new Tween(20, { duration, delay, easing: easingMap[selectedEasing] }));
 </script>
 
 <div class="flex flex-wrap items-center gap-x-4 gap-y-2 lg:gap-x-8">
@@ -24,3 +34,55 @@
 		>{tween.current.toFixed(2)}%</small
 	>
 </div>
+
+<Card.Root class="group relative mt-8 inline-block h-full w-full max-w-sm transition ">
+	<Card.Header>
+		<Card.Title>Properties</Card.Title>
+	</Card.Header>
+	<Card.Content class="space-y-3">
+		<div class="flex items-center gap-x-4">
+			<input
+				id="duration"
+				class="max-w-20"
+				type="number"
+				min="0"
+				max="1000"
+				bind:value={duration}
+			/>
+			<label for="duration" class="mb-0">Duration in ms</label>
+		</div>
+		<div class="flex items-center gap-x-4">
+			<input id="delay" class="max-w-20" type="number" min="0" max="1000" bind:value={delay} />
+			<label for="delay" class="mb-0">Duration in ms</label>
+		</div>
+		<fieldset>
+			<legend>Easing</legend>
+			{#each Object.keys(easingMap) as easing (easing)}
+				<div class="flex items-center gap-x-4">
+					<input
+						id={easing}
+						class="focus:ring-none max-w-max accent-primary focus:outline-none"
+						type="radio"
+						bind:group={selectedEasing}
+						value={easing}
+					/>
+					<label for={easing} class="mb-0">{easing}</label>
+				</div>
+			{/each}
+		</fieldset>
+		<!-- <RadioGroup.Root value={selectedEasing}>
+			<div class="flex items-center space-x-2">
+				<RadioGroup.Item value="linear" id="linear" />
+				<label for="linar" class="mb-0">Linear</label>
+			</div>
+			<div class="flex items-center space-x-2">
+				<RadioGroup.Item value="sineInOut" id="sineInOut" />
+				<label for="sineInOut">sineInOut</label>
+			</div>
+			<div class="flex items-center space-x-2">
+				<RadioGroup.Item value="bounceInOut" id="bounceInOut" />
+				<label for="bounceInOut">bounceInOut</label>
+			</div>
+		</RadioGroup.Root> -->
+	</Card.Content>
+</Card.Root>

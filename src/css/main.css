@@ -144,7 +144,7 @@
 		
 	}
 
-	label {
+	label, legend {
 		@apply block mb-1 text-sm;
 	}
 
