@@ -23,7 +23,7 @@
 	}}
 >
 	<label for="number">Deine Nummer <sup class="text-destructive">*</sup></label>
-	<input type="number" name="number" id="number" />
+	<input name="number" id="number" />
 
 	<Button type="submit" class="mt-4">Submit</Button>
 </form>
