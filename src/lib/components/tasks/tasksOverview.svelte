@@ -1,25 +1,31 @@
 <script lang="ts">
 	import type { DifficultyProps } from '$lib/types';
 	import { sineInOut } from 'svelte/easing';
-	import { fade, fly } from 'svelte/transition';
+	import { fly } from 'svelte/transition';
 	import { createTasks } from '$lib/data';
 	import Accordion from '../ui/accordion/accordion.svelte';
 	import Badge from '../ui/badge/badge.svelte';
 	import Button from '../ui/button/button.svelte';
 
-	const tasks = createTasks();
+	const tasks = createTasks().sort((a, b) => a.difficulty.level - b.difficulty.level);
 
-	const levels = tasks.reduce((acc: DifficultyProps[], curr) => {
-		if (!acc.includes(curr.difficulty)) {
-			acc.push(curr.difficulty);
+	const levelMap = {
+		1: 'easy',
+		2: 'medium',
+		3: 'advanced'
+	};
+
+	const levels = tasks.reduce((acc: (1 | 2 | 3)[], curr) => {
+		if (!acc.includes(curr.difficulty.level)) {
+			acc.push(curr.difficulty.level);
 		}
 
 		return acc;
 	}, []);
 
-	let selected: DifficultyProps[] = $state([]);
+	let selected: (1 | 2 | 3)[] = $state([]);
 
-	const toggleFilter = (level: DifficultyProps) => {
+	const toggleFilter = (level: 1 | 2 | 3) => {
 		const index = selected.indexOf(level);
 		if (index < 0) {
 			selected.push(level);
@@ -33,7 +39,7 @@
 	const filteredTasks = $derived.by(() => {
 		return tasks.filter((task) => {
 			if (!selected.length) return true;
-			return selected.includes(task.difficulty);
+			return selected.includes(task.difficulty.level);
 		});
 	});
 </script>
@@ -43,7 +49,7 @@
 	{#each levels as level}
 		<Button
 			variant={selected.includes(level) ? 'default' : 'secondary'}
-			onclick={() => toggleFilter(level)}>{level}</Button
+			onclick={() => toggleFilter(level)}>{levelMap[level]}</Button
 		>
 	{/each}
 </div>
@@ -61,12 +67,12 @@
 					</span>
 					<Badge
 						variant="outline"
-						class="inline-block max-w-max lg:mr-8 {task.difficulty == 'easy' && 'bg-primary'}
-				{task.difficulty == 'medium' && 'bg-yellow text-yellow-foreground'}
-				{task.difficulty == 'advanced' && 'bg-destructive text-destructive-foreground'}
-				"
+						class="inline-block max-w-max lg:mr-8 {task.difficulty.label == 'easy' && 'bg-primary'}
+						{task.difficulty.label == 'medium' && 'bg-yellow text-yellow-foreground'}
+						{task.difficulty.label == 'advanced' && 'bg-destructive text-destructive-foreground'}
+						"
 					>
-						{task.difficulty}
+						{task.difficulty.label}
 					</Badge>
 				</div>
 			{/snippet}

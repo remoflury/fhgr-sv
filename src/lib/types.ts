@@ -1,6 +1,9 @@
 import type { Component } from "svelte";
 
-export type DifficultyProps = "easy" | "medium" | "advanced"
+export type DifficultyProps ={
+  level: 1 | 2 | 3,
+  label:  "easy" | "medium" | "advanced"
+}
 
 export type TaskProps = {
   title: string;
