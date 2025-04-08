@@ -53,7 +53,7 @@
 		</div>
 		<div class="flex items-center gap-x-4">
 			<input id="delay" class="max-w-20" type="number" min="0" max="1000" bind:value={delay} />
-			<label for="delay" class="mb-0">Duration in ms</label>
+			<label for="delay" class="mb-0">Delay in ms</label>
 		</div>
 		<fieldset>
 			<legend>Easing</legend>
@@ -70,19 +70,5 @@
 				</div>
 			{/each}
 		</fieldset>
-		<!-- <RadioGroup.Root value={selectedEasing}>
-			<div class="flex items-center space-x-2">
-				<RadioGroup.Item value="linear" id="linear" />
-				<label for="linar" class="mb-0">Linear</label>
-			</div>
-			<div class="flex items-center space-x-2">
-				<RadioGroup.Item value="sineInOut" id="sineInOut" />
-				<label for="sineInOut">sineInOut</label>
-			</div>
-			<div class="flex items-center space-x-2">
-				<RadioGroup.Item value="bounceInOut" id="bounceInOut" />
-				<label for="bounceInOut">bounceInOut</label>
-			</div>
-		</RadioGroup.Root> -->
 	</Card.Content>
 </Card.Root>

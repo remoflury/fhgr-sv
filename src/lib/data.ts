@@ -42,9 +42,21 @@ export const createTasks = (): TaskProps[] => {
       }
     },
     {
+      points: 1,
+      difficulty: "easy",
+      title: "Bindings & Reactivity",
+      description: `
+        Erstelle einen input field und zeige dessen Inhalt direkt als Titel an. Erstelle nebenbei eine Anzeige, die automatisch die aktuelle Anzahl der "e" rausgibt.
+      `,
+      more: {
+        title: EXAMPLE_TITLE,
+        component: InputBinding
+      }
+    },
+    {
       points: 2,
       difficulty: "easy",
-      title: "Bindings",
+      title: "Bindings & Reactivity 2",
       description: "Erstelle ein Input Field, welche ein Element animiert (Farbe, Width, etc.). Nutze dafür bindings.",
       more: {
         title: EXAMPLE_TITLE,
@@ -160,18 +172,6 @@ export const createTasks = (): TaskProps[] => {
       }
     },
     {
-      points: 1,
-      difficulty: "easy",
-      title: "Input value binding",
-      description: `
-        Erstelle einen input field und zeige dessen Inhalt direkt als Titel an. Erstelle nebenbei eine Anzeige, die automatisch die aktuelle Anzahl der "e" rausgibt.
-      `,
-      more: {
-        title: EXAMPLE_TITLE,
-        component: InputBinding
-      }
-    },
-    {
       points: 2,
       difficulty: "easy",
       title: "Stores",
@@ -187,18 +187,18 @@ export const createTasks = (): TaskProps[] => {
         component: StoreTask
       }
     },
-    {
-      points: 2,
-      difficulty: "easy",
-      title: "$effects",
-      description: `
-        Erstelle einen Komponenten mit einem Button, welcher on click die Hintergrundfarbe des Body ändert. Nutze dazu $effect.
-      `,
-      more: {
-        title: EXAMPLE_TITLE,
-        component: EffectTask
-      }
-    },
+    // {
+    //   points: 2,
+    //   difficulty: "easy",
+    //   title: "$effects",
+    //   description: `
+    //     Erstelle einen Komponenten mit einem Button, welcher on click die Hintergrundfarbe des Body ändert. Nutze dazu $effect.
+    //   `,
+    //   more: {
+    //     title: EXAMPLE_TITLE,
+    //     component: EffectTask
+    //   }
+    // },
     {
       points: 4,
       difficulty: "medium",

@@ -6,7 +6,7 @@
 
 <p>
 	Hier ist ein Formular, welches keine Frontend-Validierung hat (max=9 und requred="true" fehlen).
-	Die Nummer sollte kleiner als 10 sein. Die Valiedierung geschieht Server-Seitig.
+	Die Nummer sollte kleiner als 10 sein. Die Validierung geschieht Server-Seitig.
 </p>
 <form
 	action="/aufgaben?/formaction"
