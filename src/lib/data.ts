@@ -8,7 +8,7 @@ import ConditionalClasses from "./components/tasks/conditionalClasses.svelte";
 import CounterButtons from "./components/tasks/counterButtons.svelte";
 import DynamicAccordions from "./components/tasks/dynamicAccordions.svelte";
 import DynamicRouting from "./components/tasks/dynamicRouting.svelte";
-import EffectTask from "./components/tasks/effectTask.svelte";
+// import EffectTask from "./components/tasks/effectTask.svelte";
 import FormActions from "./components/tasks/formActions.svelte";
 import InputBinding from "./components/tasks/inputBinding.svelte";
 import MousePositionTask from "./components/tasks/mousePositionTask.svelte";
@@ -139,7 +139,7 @@ export const createTasks = (): TaskProps[] => {
       difficulty: "easy",
       title: "Basic Routing and Fetching, mit Layouts und Errors",
       description: `
-       Erstelle eine neue Route /basic-routing. Erstelle eine Subroute /basic-routing/test.
+       Erstelle eine neue Route /basic-routing. Erstelle eine Subroute /basic-routing.
        Setze deine Files so auf, dass du ein simples Menu in /basic-routing hast, welches automatisch in alles Subroutes (z.B. /basic-routing/test) vorkommt.
        Erstelle zudem in /basic-routing ein +page.server.ts, welches einen Inhalt (h1 und p) lädt und ans +page.svelte gibt.
        Stelle sicher, dass eine Error Seite aufgerufen wird, wenn /basic-routing/blabla aufgerufen wird.
@@ -204,7 +204,7 @@ export const createTasks = (): TaskProps[] => {
       difficulty: "medium",
       title: "Page Transitions",
       description: `
-        Erstelle eine neue Route /page-transition mit einem +layout.svelte & +page.svelte. Erstelle danach Subroutes /page-transition/[slug]. 
+        Erstelle eine neue Route /page-transition mit einem +layout.svelte & +page.svelte. Erstelle danach Subroutes /page-transition/[slug] oder einfach mehrere Einzelsubroutes. 
         Erfasse im Layout ein Menu, damit du zwischen den Seiten hin und her wechseln kannst. Implementiere eine Page Transition zwischen den Seiten.
       `,
       more: {
