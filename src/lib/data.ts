@@ -204,7 +204,7 @@ export const createTasks = (): TaskProps[] => {
         Stell dir vor, du hast eine Datenbank API, auf die nicht jede*r zugreifen soll. Dazu gibt es sogenannte API-Keys, welche verifizieren, dass du die API lesen darfst.
         Damit der API Key nicht veröffentlich wird, muss der Request jeweils server-seitig ausgelesen werden. Kopiere diesen API Key: <em style="font-weight: bold">${PUBLIC_CUSTOM_KEY}</em> in ein .env-File im Root-Directory deines Projektes.
         Erstelle einen client-seitigen Fetch an einen eigenen <a href="https://svelte.dev/docs/kit/routing#server" target="_blank">custom api Endpoint</a>.
-        Fetche von dort aus ${page.url.origin}/api und authentifiziere dich mittels eines "x-api-key": <API KEY> in den Headers.
+        Fetche von dort aus ${page.url.origin}/api/users und authentifiziere dich mittels eines "x-api-key": <API KEY> in den Headers.
         Stelle die Response im Frontent dar und erstelle einen zusätzlichen Filter mit URL Parametern für eine Suche (q).
         <br/>
         <br/>
