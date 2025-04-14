@@ -1,23 +1,22 @@
-import { fail } from "@sveltejs/kit";
-import type { Actions } from "./$types";
+import { fail } from '@sveltejs/kit';
+import type { Actions } from './$types';
 
 export const actions: Actions = {
-  formaction: async ({ request }) => {
-    const data = await request.formData()
+	formaction: async ({ request }) => {
+		const data = await request.formData();
 
-    const number = data.get('number')
+		const number = data.get('number');
 
-    if (!number) {
-      return fail(403, { message: "Nummer muss ausgefüllt sein."})
-    }
+		if (!number) {
+			return fail(403, { message: 'Nummer muss ausgefüllt sein.' });
+		}
 
-    if (!Number(number)) {
-      return fail(403, { message: "Dein Input muss eine Nummer sein."})
-    }
-    
-    if (Number(number) >= 10) {
-      return fail(403, { message: "Nummer muss kleiner als 10 sein."})
-    }
+		if (!Number(number)) {
+			return fail(403, { message: 'Dein Input muss eine Nummer sein.' });
+		}
 
-  }
+		if (Number(number) >= 10) {
+			return fail(403, { message: 'Nummer muss kleiner als 10 sein.' });
+		}
+	}
 };

@@ -1,57 +1,57 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
+
 @layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-    --primary: 142.1 76.2% 36.3%;
-    --primary-foreground: 355.7 100% 97.3%;
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
-    --destructive: 0 72.22% 50.59%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 142.1 76.2% 36.3%;
-    --radius: 0.5rem;
+	:root {
+		--background: 0 0% 100%;
+		--foreground: 240 10% 3.9%;
+		--card: 0 0% 100%;
+		--card-foreground: 240 10% 3.9%;
+		--popover: 0 0% 100%;
+		--popover-foreground: 240 10% 3.9%;
+		--primary: 142.1 76.2% 36.3%;
+		--primary-foreground: 355.7 100% 97.3%;
+		--secondary: 240 4.8% 95.9%;
+		--secondary-foreground: 240 5.9% 10%;
+		--muted: 240 4.8% 95.9%;
+		--muted-foreground: 240 3.8% 46.1%;
+		--accent: 240 4.8% 95.9%;
+		--accent-foreground: 240 5.9% 10%;
+		--destructive: 0 72.22% 50.59%;
+		--destructive-foreground: 0 0% 98%;
+		--border: 240 5.9% 90%;
+		--input: 240 5.9% 90%;
+		--ring: 142.1 76.2% 36.3%;
+		--radius: 0.5rem;
 
 		--yellow: 47.9 95.8% 53.1%;
-  }
-  .dark {
-    --background: 20 14.3% 4.1%;
-    --foreground: 0 0% 95%;
-    --card: 24 9.8% 10%;
-    --card-foreground: 0 0% 95%;
-    --popover: 0 0% 9%;
-    --popover-foreground: 0 0% 95%;
-    --primary: 142.1 70.6% 45.3%;
-    --primary-foreground: 144.9 80.4% 10%;
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 15%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 12 6.5% 15.1%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 85.7% 97.3%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 142.4 71.8% 29.2%;
+	}
+	.dark {
+		--background: 20 14.3% 4.1%;
+		--foreground: 0 0% 95%;
+		--card: 24 9.8% 10%;
+		--card-foreground: 0 0% 95%;
+		--popover: 0 0% 9%;
+		--popover-foreground: 0 0% 95%;
+		--primary: 142.1 70.6% 45.3%;
+		--primary-foreground: 144.9 80.4% 10%;
+		--secondary: 240 3.7% 15.9%;
+		--secondary-foreground: 0 0% 98%;
+		--muted: 0 0% 15%;
+		--muted-foreground: 240 5% 64.9%;
+		--accent: 12 6.5% 15.1%;
+		--accent-foreground: 0 0% 98%;
+		--destructive: 0 62.8% 30.6%;
+		--destructive-foreground: 0 85.7% 97.3%;
+		--border: 240 3.7% 15.9%;
+		--input: 240 3.7% 15.9%;
+		--ring: 142.4 71.8% 29.2%;
 
 		--yellow: 47.9 95.8% 53.1%;
-  }
+	}
 }
- 
+
 @layer base {
 	* {
 		@apply border-border selection:bg-primary selection:text-primary-foreground;
@@ -64,7 +64,6 @@
 		background-image: radial-gradient(var(--pattern-fg) 1px, transparent 0);
 	}
 
-
 	h1,
 	.h1,
 	h2,
@@ -73,7 +72,7 @@
 	.h3,
 	h4,
 	.h4 {
-		@apply font-atkinson tracking-wider
+		@apply font-atkinson tracking-wider;
 	}
 
 	h1,
@@ -102,7 +101,7 @@
 	ol,
 	ul,
 	li {
-		@apply leading-relaxed tracking-wide
+		@apply leading-relaxed tracking-wide;
 	}
 
 	/* Layout */
@@ -136,20 +135,19 @@
 
 @layer components {
 	.cke a {
-		@apply underline underline-offset-2 transition hover:text-primary
+		@apply underline underline-offset-2 transition hover:text-primary;
 	}
 	form {
-		@apply text-base font-normal my-8 first:mt-0 last:mb-0; 
-
-		
+		@apply my-8 text-base font-normal first:mt-0 last:mb-0;
 	}
 
-	label, legend {
-		@apply block mb-1 text-sm;
+	label,
+	legend {
+		@apply mb-1 block text-sm;
 	}
 
 	input {
-		@apply block w-full !bg-white text-black px-4 py-1 selection:text-foreground border-foreground border rounded-md focus:outline-none focus:outline-primary
+		@apply block w-full rounded-md border border-foreground !bg-white px-4 py-1 text-black selection:text-foreground focus:outline-none focus:outline-primary;
 	}
 
 	/* remove default input[type="number"] arrows */
@@ -161,11 +159,11 @@
 	}
 
 	/* Firefox */
-	input[type=number] {
+	input[type='number'] {
 		-moz-appearance: textfield;
 	}
 
-	input[type=checkbox] {
-		@apply focus:outline-none accent-primary
+	input[type='checkbox'] {
+		@apply accent-primary focus:outline-none;
 	}
 }
